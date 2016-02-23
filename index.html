@@ -1,0 +1,845 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keep Talking and Nobody Explodes v. 1</title>
+    <meta name="viewport" content="initial-scale=1"> 
+
+    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="icon" href="favicon.ico" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48421906-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+    <div id="ManualContent">
+    <div class="section">
+    
+    <div class="page section-title">
+		<div style="position:relative; height:0;">&nbsp;</div> 
+		<div class="page-footer absolute-footer no-auto-footer">Revizyon 3</div>
+        <div class="page-content">
+			<img style="margin: 1em auto 2em; width: 42em;" alt="Keep Talking and Nobody Explodes" src="img/ktane-logo.png">
+    	    <span style="font-size: 12em; line-height: 1.1em;">BOMBA</span>
+			<br>
+			<span style="font-size: 15.5em; line-height: 0.8em;">İMHA</span>
+			<br>
+			<span style="font-size: 8em; line-height: 0.7em;">KILAVUZU</span>
+			<h2 style="margin: 1.2em auto; text-decoration: none; line-height: 1em; font-size: 2.8em;">Sürüm 1<br>
+				<span style="font-size: 0.57em; font-weight: normal;">Doğrulama Kodu: 241</span>
+						</h2>
+        </div>
+		<div class="page-footer relative-footer no-auto-footer">Türkçe Revizyon 1</div>
+    </div>
+</div><div class="section">
+    <div class="section">
+    <div class="page section-title">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Giriş</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <div class="vertical-spacer"></div>
+            
+            <p style="font-style:italic;">Tehlikeli ve zorlu bomba imha dünyasına adım atmak üzeresin.</p>
+            <p style="font-style:italic;">Bir <em style="font-style:italic;">uzman</em> olarak bu kılavuzu ezbere bilmelisin. Bu sayfalarda bombaların en karmaşığını bile imha etmek için gereken her şeyi bulacaksın.<br>Unutma &mdash; En küçük hata her şeyin sonu olur!</p>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Bomba İmha</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <h1>Bomba İmha</h1>
+            
+			<p>Bir bomba, geri sayım sayacı 0:00'a ulaştığında veya çok fazla hata yapıldığında patlar. Bir bombayı imha etmenin tek yolu tüm modüllerini süre dolmadan etkisiz hale getirmektir.</p>
+			
+			<div class="bomb-diagram">
+				<span class="diagram-label">Örnek Bomba</span><br>
+				<table><tbody><tr><td><img class="bomb-diagram-front" src="img/Bomb.svg"><br>Ön</td><td><img class="bomb-diagram-side" src="img/BombSide.svg"><br>Yan</td></tr></tbody></table>
+			</div>
+			
+			<h3>Modüller</h3>
+			<p>Her bombada etkisiz hale getirilmesi gereken en fazla 11 adet modül bulunur. Modüller birbirlerinden bağımsızdır ve herhangi bir sırada etkisiz hale getirilebilirler.</p>
+			<p>Modülleri etkisiz hale getirme talimatları 1. bölümde verilmiştir. "Ağlak" modüller diğer modüllerden farklıdır ve 2. bölümde açıklanmıştır.</p>
+            
+            <h3>"Iska"lar</h3>
+			<div class="timer-diagram">Iska Göstergesi<br><img src="img/TimerComponent.svg"></div>
+            <p>İmhacı bir hata yaptığında bomba bir "ıska" kaydeder. Iska sayısı geri sayım sayacının hemen üstünde yer alan ıska göstergesinden takip edilebilir. Iska göstergeli bombalar üçüncü ıskada patlar. Bomba bir ıska kaydettiğinde geri sayım sayacı daha hızlı saymaya başlayacaktır.</p>
+			<p>Bombada bir ıska göstergesi yer almıyorsa hataya yer yoktur, ilk ıskada bomba patlar.</p>
+
+			<h3>Bilgi Toplama</h3>
+			<p>Bazı talimatlar bomba hakkında özel bilgilere ihtiyaç duyarlar (ör. seri numarası). Bu tip bilgiler genellikle bombanın üstünde, altında veya yan taraflarında bulunur. Bomba bilgileri tanım talimatları Ek A, B ve C'de verilmiştir.</p>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page section-title">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Bölüm 1: Modüller</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <div class="vertical-spacer"></div>
+		    <img class="diagram" src="img/Component.svg">
+			<div class="new-block-formatting-context">
+				<h1>Bölüm 1: Modüller</h1>
+				<p>Modüllerin sağ üst köşelerinde bir LED lamba bulunur. Modül etkisiz hale getirildiğinde bu LED yeşil yanar.</p>
+				<p>Bir bombayı imha etmek için tüm modülleri etkisiz hale getirilmelidir.</p>
+			</div>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Kablolar</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/WireComponent.svg">
+            <h2>Kablolar Hakkında</h2>
+            <p class="flavour-text">
+                Kablolar elektroniğin kanıdır! Yok yok, elektrik kanıdır. Kablolar daha çok atardamarlarıdır. Peki toplardamarlar? Neyse ya çok karıştırmayalım...</p>
+
+			<ul>
+				<li>Bir kablo modülünde 3 ila 6 kablo bulunur.</li>
+				<li>Modülü etkisiz hale getirmek için yalnızca <em>doğru</em> kablo kesilmelidir</li>
+				<li>Sıralama yukarıdan aşağı doğrudur.</li>
+			</ul>
+
+			<table>
+				<tbody><tr><td><strong><em>3 kablo</em></strong>	<br>Kırmızı kablo yoksa ikinci kabloyu kes.<br>Aksi halde, son kablo beyazsa, son kabloyu kes.<br>Aksi halde, birden fazla mavi kablo varsa son mavi kabloyu kes.<br>Aksi halde, son kabloyu kes.</td></tr><tr><td><strong><em>4 kablo</em></strong><br>Birden fazla kırmızı kablo varsa ve seri numarasının son hanesi tekse son kırmızı kabloyu kes.<br>Aksi halde, son kablo sarıysa ve kırmızı kablo yoksa ilk kabloyu kes.<br>Aksi halde, yalnızca bir mavi kablo varsa ilk kabloyu kes.<br>Aksi halde, birden fazla sarı kablo varsa son kabloyu kes.<br>Aksi halde, ikinci kabloyu kes.</td></tr><tr><td><strong><em>5 kablo</em></strong><br>Son kablo siyahsa ve seri numarasının son hanesi tekse dördüncü kabloyu kes.<br>Aksi halde, yalnızca bir kırmızı ve birden fazla sarı kablo varsa ilk kabloyu kes.<br>Aksi halde, siyah kablo yoksa ikinci kabloyu kes.<br>Aksi halde, ilk kabloyu kes.</td></tr><tr><td><strong><em>6 kablo:</em></strong>
+				<br>Sarı kablo yoksa ve seri numarasının son hanesi tekse üçüncü kabloyu kes.
+				<br>Aksi halde, yalnızca bir sarı ve birden fazla beyaz kablo varsa dördüncü kabloyu kes.
+				<br>Aksi halde, kırmızı kablo yoksa son kabloyu kes.
+				<br>Aksi halde, dördüncü kabloyu kes.</td></tr>			</tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Düğme</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/ButtonComponent.svg">
+            <h2>Düğme Hakkında</h2>
+            <p class="flavour-text">Üzerinde "BAS" yazınca basman gerektiğini zannedersin. İşte bu kafa insanları havaya uçuruyor.</p>
+            <p class="appendix-reference">Gösterge tanımları için Ek A'ya bak.<br>Pil tanımları için Ek B'ye bak.</p>		    <p>Aşağıdaki kuralları listelendiği sırada takip et. Eşleşen ilk kuralı uygula:</p>
+		    <ol>
+		    	<li>Düğme maviyse ve üzerinde "Abort" yazıyorsa basılı tut ve "Basılı Düğmeyi Bırakmak" başlığına bak.</li>
+		    	<li>Bombada birden fazla pil varsa ve düğmenin üzerinde "Detonate" yazıyorsa bas ve hemen bırak.</li>
+		    	<li>Düğme beyazsa ve bombanın üzerinde CAR etiketli ışığı yanan bir gösterge varsa basılı tut ve "Basılı Düğmeyi Bırakmak" başlığına bak.</li>
+		    	<li>Bombada ikiden fazla pil ve FRK etiketli ışığı yanan bir gösterge varsa bas ve hemen bırak.</li>
+		    	<li>Düğme sarıysa, basılı tut ve "Basılı Düğmeyi Bırakmak" başlığına bak.</li>
+		    	<li>Düğme kırmızıysa ve üzerinde "Hold" yazıyorsa bas ve hemen bırak.</li>
+		    	<li>Yukarıdakilerin hiçbiri geçerli değilse basılı tut ve "Basılı Düğmeyi Bırakmak" başlığına bak.</li>            
+		    </ol>
+		    <h3>Basılı Düğmeyi Bırakmak</h3>
+            <p>Düğmeyi basılı tutmaya başladığında modülün sağ yanında renkli bir şerit yanacak. Şeridin rengine göre belirli bir zamanda düğmeyi bırakman gerekiyor:</p>
+            <ul>
+           		<li><em>Mavi şerit:</em> sayaç herhangi bir konumda 4 gösterdiğinde bırak.</li><li><em>Beyaz şerit:</em> sayaç herhangi bir konumda 1 gösterdiğinde bırak.</li><li><em>Sarı şerit:</em> sayaç herhangi bir konumda 5 gösterdiğinde bırak.</li><li><em>Başka herhangi bir renk:</em> sayaç herhangi bir konumda 1 gösterdiğinde bırak.</li>            </ul>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+	<div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Tuş takımları</span>
+		</div>
+	    <div class="page-footer absolute-footer"></div>
+	    <div class="page-content">
+		    <img class="diagram" src="img/KeypadComponent.svg">
+		    <h2>Tuş Takımları Hakkında</h2>
+		    <p class="flavour-text">
+			    Tövbe estağfurullah, satanikler mi yapmış bunları, nedir bu şekiller?
+		    </p>
+			<ul>
+				<li>
+					Tuş takımındaki şekillerin tamamı aşağıdaki sütunların yalnızca birinde var.
+				</li>
+				<li>
+					Tuş takımındaki sembollere sütunda yukarıdan aşağı göründüğü sırada bas.
+				</li>
+			</ul>
+			<br>
+			<br>
+			<table class="keypad-table">
+				<tbody><tr><td class="keypad-table-column"><img src="img/symbols/28-balloon.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/16-euro.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/1-copyright.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/11-six.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/24-pitchfork.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/11-six.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/13-at.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/28-balloon.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/8-pumpkin.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/21-paragraph.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/4-smileyface.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/16-euro.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/30-upsidedowny.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/23-leftc.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/26-cursive.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/31-bt.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/31-bt.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/27-tracks.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/12-squigglyn.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/26-cursive.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/5-doublek.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/7-squidknife.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/22-rightc.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/14-ae.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/7-squidknife.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/3-hollowstar.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/15-meltedthree.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/5-doublek.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/21-paragraph.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/24-pitchfork.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/9-hookn.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/9-hookn.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/30-upsidedowny.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/20-questionmark.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/19-dragon.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/18-nwithhat.png" class="keypad-symbol-image"></td></tr><tr><td class="keypad-table-column"><img src="img/symbols/23-leftc.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/20-questionmark.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/3-hollowstar.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/4-smileyface.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/2-filledstar.png" class="keypad-symbol-image"></td><td class="keypad-table-spacer"></td><td class="keypad-table-column"><img src="img/symbols/6-omega.png" class="keypad-symbol-image"></td></tr>			</tbody></table>
+<!--
+				<p>*Çevirmenin notu:</p>
+				<table>
+					<tbody>
+						<tr>
+							<td><img src="img/symbols/28-balloon.png" class="keypad-symbol-image"></td>
+							<td>Balon</td>
+							<td><img src="img/symbols/16-euro.png" class="keypad-symbol-image"></td>
+							<td>Euro</td>
+							<td><img src="img/symbols/1-copyright.png" class="keypad-symbol-image"></td>
+							<td>Copyright</td>
+							<td><img src="img/symbols/11-six.png" class="keypad-symbol-image"></td>
+							<td>Altı</td>
+							<td><img src="img/symbols/24-pitchfork.png" class="keypad-symbol-image"></td>
+							<td>Çatal</td>
+						</tr>
+						<tr>
+							<td><img src="img/symbols/13-at.png" class="keypad-symbol-image"></td>
+							<td>A-T</td>
+							<td><img src="img/symbols/8-pumpkin.png" class="keypad-symbol-image"></td>
+							<td>Balkabağı</td>
+							<td><img src="img/symbols/21-paragraph.png" class="keypad-symbol-image"></td>
+							<td>Paragraf</td>
+							<td><img src="img/symbols/4-smileyface.png" class="keypad-symbol-image"></td>
+							<td>Smiley</td>
+							<td><img src="img/symbols/30-upsidedowny.png" class="keypad-symbol-image"></td>
+							<td>Lambda</td>
+						</tr>
+						<tr>
+							<td><img src="img/symbols/23-leftc.png" class="keypad-symbol-image"></td>
+							<td>Ters C</td>
+							<td><img src="img/symbols/26-cursive.png" class="keypad-symbol-image"></td>
+							<td>El yazısı</td>
+							<td><img src="img/symbols/31-bt.png" class="keypad-symbol-image"></td>
+							<td>B-T</td>
+							<td><img src="img/symbols/27-tracks.png" class="keypad-symbol-image"></td>
+							<td>Tren yolu</td>
+							<td><img src="img/symbols/12-squigglyn.png" class="keypad-symbol-image"></td>
+							<td>Yıldırım</td>
+						</tr>
+						<tr>
+							<td><img src="img/symbols/5-doublek.png" class="keypad-symbol-image"></td>
+							<td>Çift K</td>
+							<td><img src="img/symbols/7-squidknife.png" class="keypad-symbol-image"></td>
+							<td>Bıçak</td>
+							<td><img src="img/symbols/22-rightc.png" class="keypad-symbol-image"></td>
+							<td>C</td>
+							<td><img src="img/symbols/14-ae.png" class="keypad-symbol-image"></td>
+							<td>A-E</td>
+							<td><img src="img/symbols/3-hollowstar.png" class="keypad-symbol-image"></td>
+							<td>Boş yıldız</td>
+						</tr>
+						<tr>
+							<td><img src="img/symbols/15-meltedthree.png" class="keypad-symbol-image"></td>
+							<td>Erimiş 3</td>
+							<td><img src="img/symbols/9-hookn.png" class="keypad-symbol-image"></td>
+							<td>Çengel N</td>
+							<td><img src="img/symbols/20-questionmark.png" class="keypad-symbol-image"></td>
+							<td>Soru işareti</td>
+							<td><img src="img/symbols/19-dragon.png" class="keypad-symbol-image"></td>
+							<td>Ejderha</td>
+							<td><img src="img/symbols/18-nwithhat.png" class="keypad-symbol-image"></td>
+							<td>Şapkalı N</td>
+						</tr>
+						<tr>
+							<td><img src="img/symbols/2-filledstar.png" class="keypad-symbol-image"></td>
+							<td>Dolu yıldız</td>
+							<td><img src="img/symbols/6-omega.png" class="keypad-symbol-image"></td>
+							<td>Omega</td>
+						</tr>
+					</tbody>
+				</table>-->
+	    </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Simon Der Ki</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/SimonComponent.svg">
+            <h2>Simon Der Ki Hakkında</h2>
+            <p class="flavour-text">Hani böyle bebelerin elinde var ya, böyle şekilleri eşleştiriyorlar, aynı onun gibi ama daha çakması bu.</p>
+            
+			<ol>
+				<li>Renkli dört düğmeden biri yanıp sönecek.</li>
+				<li>Aşağıdan doğru tabloyu bul ve karşılık gelen renge bas.</li>
+				<li>İlk düğme tekrar yanıp sönecek, ardından da bir başkası. Bu iki renge karşılık gelen renkleri bul ve aynı sırada bas.</li>
+				<li>İlk iki düğme tekrar yanıp sönecek ve bir yenisi eklenecek. Bu renklere karşılık gelen renkleri bul ve aynı sırada bas.</li>
+				<li>Diziyi her doğru girişinde dizi bir renk daha eklenerek uzayacak ve sonunda modül etkisiz hale gelecek.</li>
+			</ol>
+		    <img alt="Top: Blue, Left: Red, Right: Yellow, Bottom: Green" style="height: 9em; margin: 1em auto; display: block;" src="img/SimonComponent_ColourLegend.svg">
+
+    <p>Seri numarası sesli harf içeriyorsa:</p><p>
+                        </p><table class="repeaters-table">
+                <tbody><tr>
+            	    <th class="repeaters-spacer" colspan="2"></th>
+                    <th>Kırmızı Işık</th>
+                    <th>Mavi Işık</th>
+                    <th>Yeşil Işık</th>
+                    <th>Sarı Işık</th>
+                </tr>
+                <tr><th rowspan="3">Basılacak&nbsp;düğme:</th><th>Iska yok</th><td>Mavi</td><td>Kırmızı</td><td>Sarı</td><td>Yeşil</td></tr><tr><th>1&nbsp;Iska</th><td>Sarı</td><td>Yeşil</td><td>Mavi</td><td>Kırmızı</td></tr><tr><th>2&nbsp;Iska</th><td>Yeşil</td><td>Kırmızı</td><td>Sarı</td><td>Mavi</td></tr>            </tbody></table>
+        <br>
+    <p>Seri numarası sesli harf <em>içermiyorsa</em>:</p><p>
+            </p><table class="repeaters-table">
+                <tbody><tr>
+            	    <th class="repeaters-spacer" colspan="2"></th>
+                    <th>Kırmızı Işık</th>
+                    <th>Mavi Işık</th>
+                    <th>Yeşil Işık</th>
+                    <th>Sarı Işık</th>
+                </tr>
+                <tr><th rowspan="3">Basılacak&nbsp;düğme:</th><th>Iska yok</th><td>Mavi</td><td>Sarı</td><td>Yeşil</td><td>Kırmızı</td></tr><tr><th>1&nbsp;Iska</th><td>Kırmızı</td><td>Mavi</td><td>Sarı</td><td>Yeşil</td></tr><tr><th>2&nbsp;Iska</th><td>Sarı</td><td>Yeşil</td><td>Mavi</td><td>Kırmızı</td></tr>            </tbody></table>
+
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+
+<div class="section">
+        <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">İlk Kim</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/WhosOnFirstComponent.svg">
+            <h2>İlk Kim Hakkında</h2>
+            <p class="flavour-text">Bir berber bir berbere "gel beraber bir berber dükkanı açalım" demiş. Bu yoğurdu sarımsaklasak da mı saklasak, sarımsaklamasak da mı saklasak? Kartal kalkar dal sarkar, dal salkar kartal kalkar. Ne oldu kafan mı karıştı?</p>
+		    <ol>
+			    <li>Göstergeyi oku ve aşama 1'i kullanarak hangi düğme etiketini <u>okuyacağını</u> bul.</li>
+			    <li>Bu düğme etiketini ve aşama 2'yi kullanarak hani düğmeye <u>basılması</u> gerektiğini bul.</li>
+			    <li>Modül etkisiz hale gelene kadar tekrarla.</li>
+		    </ol>
+            <h3>Aşama 1:</h3>
+			<p>Göstergeye dayanarak ilgili düğmenin etiketini <u>oku</u> ve aşama 2'ye devam et:</p>
+			<table class="whos-on-first-step1-table">
+			<tbody><tr><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">YES</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">FIRST</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">DISPLAY</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">OKAY</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">SAYS</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">NOTHING</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display"><br></th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">BLANK</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">NO</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">LED</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">LEAD</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">READ</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">RED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">REED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">LEED</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">HOLD ON</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">YOU</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">YOU ARE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td></tr><tr><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">YOUR</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">YOU'RE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">UR</th></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">THERE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">THEY'RE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">THEIR</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td></tr><tr><td></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">THEY ARE</th></tr><tr><td><br></td><td><br></td></tr><tr><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">SEE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">C</th></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr></tbody></table></td><td><table><tbody><tr><th colspan="2" class="whos-on-first-look-at-display">CEE</th></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td><br></td></tr><tr><td><br></td><td class="whos-on-first-look-at"><img style="height: 1em;" alt="Look At" src="img/eye-icon.png"></td></tr></tbody></table></td>			</tr></tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">İlk Kim</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <h3>Aşama 2:</h3>
+            <p>Aşama 1'deki etiketi kullanarak ilgili listede yer alan <u>ilk düğmeye bas:</u></p>
+            <table class="whos-on-first-step2-table">
+            	<tbody><tr><th>"READY":</th><td>YES, OKAY, WHAT, MIDDLE, LEFT, PRESS, RIGHT, BLANK, READY, NO, FIRST, UHHH, NOTHING, WAIT</td></tr><tr><th>"FIRST":</th><td>LEFT, OKAY, YES, MIDDLE, NO, RIGHT, NOTHING, UHHH, WAIT, READY, BLANK, WHAT, PRESS, FIRST</td></tr><tr><th>"NO":</th><td>BLANK, UHHH, WAIT, FIRST, WHAT, READY, RIGHT, YES, NOTHING, LEFT, PRESS, OKAY, NO, MIDDLE</td></tr><tr><th>"BLANK":</th><td>WAIT, RIGHT, OKAY, MIDDLE, BLANK, PRESS, READY, NOTHING, NO, WHAT, LEFT, UHHH, YES, FIRST</td></tr><tr><th>"NOTHING":</th><td>UHHH, RIGHT, OKAY, MIDDLE, YES, BLANK, NO, PRESS, LEFT, WHAT, WAIT, FIRST, NOTHING, READY</td></tr><tr><th>"YES":</th><td>OKAY, RIGHT, UHHH, MIDDLE, FIRST, WHAT, PRESS, READY, NOTHING, YES, LEFT, BLANK, NO, WAIT</td></tr><tr><th>"WHAT":</th><td>UHHH, WHAT, LEFT, NOTHING, READY, BLANK, MIDDLE, NO, OKAY, FIRST, WAIT, YES, PRESS, RIGHT</td></tr><tr><th>"UHHH":</th><td>READY, NOTHING, LEFT, WHAT, OKAY, YES, RIGHT, NO, PRESS, BLANK, UHHH, MIDDLE, WAIT, FIRST</td></tr><tr><th>"LEFT":</th><td>RIGHT, LEFT, FIRST, NO, MIDDLE, YES, BLANK, WHAT, UHHH, WAIT, PRESS, READY, OKAY, NOTHING</td></tr><tr><th>"RIGHT":</th><td>YES, NOTHING, READY, PRESS, NO, WAIT, WHAT, RIGHT, MIDDLE, LEFT, UHHH, BLANK, OKAY, FIRST</td></tr><tr><th>"MIDDLE":</th><td>BLANK, READY, OKAY, WHAT, NOTHING, PRESS, NO, WAIT, LEFT, MIDDLE, RIGHT, FIRST, UHHH, YES</td></tr><tr><th>"OKAY":</th><td>MIDDLE, NO, FIRST, YES, UHHH, NOTHING, WAIT, OKAY, LEFT, READY, BLANK, PRESS, WHAT, RIGHT</td></tr><tr><th>"WAIT":</th><td>UHHH, NO, BLANK, OKAY, YES, LEFT, FIRST, PRESS, WHAT, WAIT, NOTHING, READY, RIGHT, MIDDLE</td></tr><tr><th>"PRESS":</th><td>RIGHT, MIDDLE, YES, READY, PRESS, OKAY, NOTHING, UHHH, BLANK, LEFT, FIRST, WHAT, NO, WAIT</td></tr><tr><th>"YOU":</th><td>SURE, YOU ARE, YOUR, YOU'RE, NEXT, UH HUH, UR, HOLD, WHAT?, YOU, UH UH, LIKE, DONE, U</td></tr><tr><th>"YOU ARE":</th><td>YOUR, NEXT, LIKE, UH HUH, WHAT?, DONE, UH UH, HOLD, YOU, U, YOU'RE, SURE, UR, YOU ARE</td></tr><tr><th>"YOUR":</th><td>UH UH, YOU ARE, UH HUH, YOUR, NEXT, UR, SURE, U, YOU'RE, YOU, WHAT?, HOLD, LIKE, DONE</td></tr><tr><th>"YOU'RE":</th><td>YOU, YOU'RE, UR, NEXT, UH UH, YOU ARE, U, YOUR, WHAT?, UH HUH, SURE, DONE, LIKE, HOLD</td></tr><tr><th>"UR":</th><td>DONE, U, UR, UH HUH, WHAT?, SURE, YOUR, HOLD, YOU'RE, LIKE, NEXT, UH UH, YOU ARE, YOU</td></tr><tr><th>"U":</th><td>UH HUH, SURE, NEXT, WHAT?, YOU'RE, UR, UH UH, DONE, U, YOU, LIKE, HOLD, YOU ARE, YOUR</td></tr><tr><th>"UH HUH":</th><td>UH HUH, YOUR, YOU ARE, YOU, DONE, HOLD, UH UH, NEXT, SURE, LIKE, YOU'RE, UR, U, WHAT?</td></tr><tr><th>"UH UH":</th><td>UR, U, YOU ARE, YOU'RE, NEXT, UH UH, DONE, YOU, UH HUH, LIKE, YOUR, SURE, HOLD, WHAT?</td></tr><tr><th>"WHAT?":</th><td>YOU, HOLD, YOU'RE, YOUR, U, DONE, UH UH, LIKE, YOU ARE, UH HUH, UR, NEXT, WHAT?, SURE</td></tr><tr><th>"DONE":</th><td>SURE, UH HUH, NEXT, WHAT?, YOUR, UR, YOU'RE, HOLD, LIKE, YOU, U, YOU ARE, UH UH, DONE</td></tr><tr><th>"NEXT":</th><td>WHAT?, UH HUH, UH UH, YOUR, HOLD, SURE, NEXT, LIKE, DONE, YOU ARE, UR, YOU'RE, U, YOU</td></tr><tr><th>"HOLD":</th><td>YOU ARE, U, DONE, UH UH, YOU, UR, SURE, WHAT?, YOU'RE, NEXT, HOLD, UH HUH, YOUR, LIKE</td></tr><tr><th>"SURE":</th><td>YOU ARE, DONE, LIKE, YOU'RE, YOU, HOLD, UH HUH, UR, SURE, U, WHAT?, NEXT, YOUR, UH UH</td></tr><tr><th>"LIKE":</th><td>YOU'RE, NEXT, U, UR, HOLD, DONE, UH UH, WHAT?, UH HUH, YOU, LIKE, SURE, YOU ARE, YOUR</td></tr>            </tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Hafıza</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/MemoryComponent.svg">
+            <h2>Hafıza Hakkında</h2>
+		    <p class="flavour-text">Hafıza hassas bir şey, fakat bomba patladığında diğer her şey de öyle, o yüzden dikkatini ver!</p>
+		    <ul>
+				<li>Modülü bir sonraki aşamaya geçirmek için doğru düğmeye bas. Modülü etkisiz hale getirmek için tüm aşamaları tamamla.</li>
+			    <li>Yanlış düğmeye basmak modülü birinci aşamaya geri götürür.</li>
+                <li>Düğme konumları soldan sağa sıralıdır.</li>
+		    </ul>
+            <div class="memory-rules">
+            	<h4>Aşama 1:</h4>
+            	<p>Göstergede yazan 1 ise, ikinci konumdaki düğmeye bas.<br>
+            	Göstergede yazan 2 ise, ikinci konumdaki düğmeye bas.<br>
+            	Göstergede yazan 3 ise, üçüncü konumdaki düğmeye bas.<br>
+            	Göstergede yazan 4 ise, dördüncü konumdaki düğmeye bas.<br>
+            	</p>
+            	<h4>Aşama 2:</h4>
+            	<p>Göstergede yazan 1 ise, "4" etiketli düğmeye bas.<br>
+            	Göstergede yazan 2 ise, 1. aşamada bastığın konumdaki düğmeye bas.<br>
+            	Göstergede yazan 3 ise, birinci konumdaki düğmeye bas.<br>
+            	Göstergede yazan 4 ise, 1. aşamada bastığın konumdaki düğmeye bas.<br>
+            	</p>
+            	<h4>Aşama 3:</h4>
+            	<p>Göstergede yazan 1 ise, 2. aşamada bastığın etiketli düğmeye bas.<br>
+            	Göstergede yazan 2 ise, 1. aşamada bastığın etiketli düğmeye bas.<br>
+            	Göstergede yazan 3 ise, üçüncü konumdaki düğmeye bas.<br>
+            	Göstergede yazan 4 ise, "4" etiketli düğmeye bas.<br></p>
+            	<h4>Aşama 4:</h4>
+            	<p>Göstergede yazan 1 ise, 1. aşamada bastığın konumdaki düğmeye bas.<br>
+            	Göstergede yazan 2 ise, birinci konumdaki düğmeye bas.<br>
+            	Göstergede yazan 3 ise, 2. aşamada bastığın konumdaki düğmeye bas.<br>
+            	Göstergede yazan 4 ise, 2. aşamada bastığın konumdaki düğmeye bas.<br>
+            	</p>
+            	<h4>Aşama 5:</h4>
+            	<p>Göstergede yazan 1 ise, 1. aşamada bastığın etiketli düğmeye bas.<br>
+            	Göstergede yazan 2 ise, 2. aşamada bastığın etiketli düğmeye bas.<br>
+            	Göstergede yazan 3 ise, 4. aşamada bastığın etiketli düğmeye bas.<br>
+            	Göstergede yazan 4 ise, 3. aşamada bastığın etiketli düğmeye bas.<br></p>            </div>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page morse-code">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Mors Kodu</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/MorseCodeComponent.svg">
+            <h2>Mors Kodu Hakkında</h2>
+		        <p class="flavour-text">Modası geçmiş bir haberleşme yöntemi mi? Sırada ne var? Neyse ki gerçek Mors alfabesi, biraz kafanı ver belki bir şeyler öğrenirsin.</p>
+				<ul>
+					<li>Yanıp sönen ışığın yayınladığı Mors kodunu aşağıdaki tabloyu kullanarak çöz ve tablodaki kelimelerden biriyle eşleştir.</li>
+					<li>Sinyal, tekrarlar arası uzun bir boşluk olacak şekilde tekrarlayacak.</li>
+					<li>Kelimeyi belirlediğinde kelimeyle eşleşen frekansı ayarla ve "TX" (yayınla) düğmesine bas.</li>
+				</ul>
+			
+		    <img src="img/MorseCode/International_Morse_Code.svg" id="morseCodeChart">	
+					
+		    <table>
+			    <tbody><tr><th>Kelime</th><th>Cevap frekansı</th></tr>
+			    <tr><td>shell</td><td>3.505 MHz</td></tr><tr><td>halls</td><td>3.515 MHz</td></tr><tr><td>slick</td><td>3.522 MHz</td></tr><tr><td>trick</td><td>3.532 MHz</td></tr><tr><td>boxes</td><td>3.535 MHz</td></tr><tr><td>leaks</td><td>3.542 MHz</td></tr><tr><td>strobe</td><td>3.545 MHz</td></tr><tr><td>bistro</td><td>3.552 MHz</td></tr><tr><td>flick</td><td>3.555 MHz</td></tr><tr><td>bombs</td><td>3.565 MHz</td></tr><tr><td>break</td><td>3.572 MHz</td></tr><tr><td>brick</td><td>3.575 MHz</td></tr><tr><td>steak</td><td>3.582 MHz</td></tr><tr><td>sting</td><td>3.592 MHz</td></tr><tr><td>vector</td><td>3.595 MHz</td></tr><tr><td>beats</td><td>3.600 MHz</td></tr>		    </tbody></table>	
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page venn-wires">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Karmaşık Kablolar</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/VennWireComponent.svg">
+            <h2>Karmaşık Kablolar Hakkında</h2>
+		        <p class="flavour-text">Bu kablolar diğerleri gibi değil, bazılarının çizgileri var! Diğerlerinden tamamen farklı. Neyse ki ne yapman gerektiğine dair tüm talimatlar eksiksiz olarak burada var! Belki biraz fazla eksiksiz...</p>
+			    <ul>
+				    <li>Her bir kabloya tek tek bak: kablonun üstünde bir LED lamba, altında "★" sembolü için bir boşluk olacak.</li>
+				    <li>Her <b>bir</b> kablo/LED/sembol kombinasyonu için aşağıdaki Venn diyagramını kullanarak kesilip kesilmemesi gerektiğini belirle.</li>
+                    <li>Kabloların birden çok rengi olabilir.</li>
+			    </ul>
+		    <div>
+			    <object width="100%" height="100%" type="image/svg+xml" data="img/gen/venn/venndiagram.svg" id="venndiagram"></object>
+		    </div>
+		    <div>
+			    <object width="100%" height="100%" type="image/svg+xml" data="img/gen/venn/legend.svg" id="vennlegend"></object>
+			    <table id="venntable">
+				    <tbody><tr><th>Harf</th><th>Talimat</th></tr>
+				    <tr><td>C</td><td>Kabloyu kes</td></tr>
+				    <tr><td>D</td><td>Kabloyu kesme</td></tr>
+				    <tr><td>S</td><td>Seri numarasının son hanesi çiftse kabloyu kes</td></tr>
+				    <tr><td>P</td><td>Bombada paralel port varsa kabloyu kes</td></tr>
+				    <tr><td>B</td><td>Bombada iki veya daha fazla pil varsa kabloyu kes</td></tr>
+			    </tbody></table>
+		    </div>
+		    <div style="clear:both;">
+            <p class="appendix-reference">Pil tanımları için Ek B'ye bak.<br>Port tanımları için Ek C'ye bak.</p>        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page wire-sequence">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Kablo Dizileri</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <img class="diagram" src="img/WireSequenceComponent.svg">
+            <h2>Kablo Dizileri Hakkında</h2>
+            <p class="flavour-text">Mühendis diyorsun, 9 tane kabloyu yönetmenin kolay bir yolunu bulmuştur diyorsun değil mi? Yok işte, bu mühendislerin hepsi aynı...</p>
+			<ul>
+			<li>Bu modülde içinde kablolar olan birkaç panel var fakat aynı anda yalnızca bir tanesi açık. Yukarı-aşağı düğmelerini kullanarak önceki veya sonraki panellere geçebilirsin.</li>
+			<li>O an çözmekte olduğun panelde gerekli olan tüm kabloları kestiğine emin olmadan başka bir panele geçme.</li>
+			<li>Kabloları aşağıdaki tabloya göre kes. Bir modül içindeki kablo görülme sayıları paneller arasında toplanarak artar.</li>
+			</ul>
+            <div style="clear:both"></div>
+            
+            <table class="red-table">
+			    <tbody>
+			        <tr>
+			            <th class="header" colspan="2">Kırmızı Kablolar</th>
+			        </tr>
+			        <tr>
+			            <th class="first-col">Görülme<br>sayısı</th>
+			            <th class="second-col">Şuna bağlıysa kes:</th>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İlk<br>görülme</td>
+			            <td class="second-col">C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İkinci<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Üçüncü<br>görülme</td>
+			            <td class="second-col">A</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dördüncü<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Beşinci<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Altıncı<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Yedinci<br>görülme</td>
+			            <td class="second-col">A, B or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Sekizinci<br>görülme</td>
+			            <td class="second-col">A or B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dokuzuncu<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			    </tbody>
+			</table>
+			<table class="blue-table">
+			    <tbody>
+			        <tr>
+			            <th class="header" colspan="2">Mavi Kablolar</th>
+			        </tr>
+			        <tr>
+			            <th class="first-col">Görülme<br>sayısı</th>
+			            <th class="second-col">Şuna bağlıysa kes:</th>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İlk<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İkinci<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Üçüncü<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dördüncü<br>görülme</td>
+			            <td class="second-col">A</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Beşinci<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Altıncı<br>görülme</td>
+			            <td class="second-col">B or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Yedinci<br>görülme</td>
+			            <td class="second-col">C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Sekizinci<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dokuzuncu<br>görülme</td>
+			            <td class="second-col">A</td>
+			        </tr>
+			    </tbody>
+			</table>
+			<table class="black-table">
+			    <tbody>
+			        <tr>
+			            <th class="header" colspan="2">Siyah Kablolar</th>
+			        </tr>
+			        <tr>
+			            <th class="first-col">Görülme<br>sayısı</th>
+			            <th class="second-col">Şuna bağlıysa kes:</th>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İlk<br>görülme</td>
+			            <td class="second-col">A, B or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">İkinci<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Üçüncü<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dördüncü<br>görülme</td>
+			            <td class="second-col">A or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Beşinci<br>görülme</td>
+			            <td class="second-col">B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Altıncı<br>görülme</td>
+			            <td class="second-col">B or C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Yedinci<br>görülme</td>
+			            <td class="second-col">A or B</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Sekizinci<br>görülme</td>
+			            <td class="second-col">C</td>
+			        </tr>
+			        <tr>
+			            <td class="first-col">Dokuzuncu<br>görülme</td>
+			            <td class="second-col">C</td>
+			        </tr>
+			    </tbody>
+			</table>
+            
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Labirentler</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/MazeComponent.svg">
+            <h2>Labirentler Hakkında</h2>
+            <p class="flavour-text">Labirent mi bu? Hani fare-peynir deneyindekilerden?</p>
+            <ul>
+                <li>Daire işaretlerinin eşleştiği labirenti bul.</li>
+                <li>İmha uzmanı ok tuşlarını kullanarak beyaz ışıktan kırmızı üçgene yol almalı.</li>
+                <li><strong>Dikkat:</strong> Labirentteki çizgilerin üzerinden geçme. Bombadaki labirentte bu çizgiler görünmüyor.</li>
+		    </ul>
+            <img src="img/gen/maze/maze0.svg" class="maze">
+            <img src="img/gen/maze/maze1.svg" class="maze">
+            <img src="img/gen/maze/maze2.svg" class="maze">
+            <img src="img/gen/maze/maze3.svg" class="maze">
+            <img src="img/gen/maze/maze4.svg" class="maze">
+            <img src="img/gen/maze/maze5.svg" class="maze">
+            <img src="img/gen/maze/maze6.svg" class="maze">
+            <img src="img/gen/maze/maze7.svg" class="maze">
+		    <img src="img/gen/maze/maze8.svg" class="maze">
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Şifreler</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/PasswordComponent.svg">
+            <h2>Şifreler Hakkında</h2>
+            <p class="flavour-text">Neyse ki bu şifre standart e-devlet şifresi güvenlik gereksinimlerini karşılamak zorunda değil: 22 karakter, büyük küçük harf karışık, bir özel karakter, bir sayı, tek ayağını üzerinde dur, burnunu tut, üç kere zıpla...</p>
+			<ul>
+				<li>Harflerin üzerindeki düğmeleri kullanarak harfleri değiştir.</li>
+				<li>Yalnızca bir kombinasyon aşağıdaki şifrelerden birine uyacak.</li>
+				<li>Doğru kelimeyi ayarladığında "SUBMIT" düğmesine bas.</li>
+			</ul>
+		    <table class="password-table">
+		    	<tbody><tr></tr><tr><td>about</td><td>after</td><td>again</td><td>below</td><td>could</td></tr><tr><td>every</td><td>first</td><td>found</td><td>great</td><td>house</td></tr><tr><td>large</td><td>learn</td><td>never</td><td>other</td><td>place</td></tr><tr><td>plant</td><td>point</td><td>right</td><td>small</td><td>sound</td></tr><tr><td>spell</td><td>still</td><td>study</td><td>their</td><td>there</td></tr><tr><td>these</td><td>thing</td><td>think</td><td>three</td><td>water</td></tr><tr><td>where</td><td>which</td><td>world</td><td>would</td><td>write</td></tr>            </tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page section-title">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Bölüm 2: Ağlak Modüller</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <div class="vertical-spacer"></div>
+	        <img class="diagram" src="img/NeedyComponent.svg">
+			<div class="new-block-formatting-context">
+				<h1>Bölüm 2: Ağlak Modüller</h1>
+				<p>Ağlak modüller etkisiz hale getirilemezler fakat sürekli tehlike arz ederler.</p>
+				<p>Ağlak modüllerin üst kısmında 2 basamaklı bir sayaç bulunur. Bombayla etkileşimde bulunmak bu modüllerin aktif hale gelmesine neden olabilir. Aktif hale geçen ağlak modül sürekli bakım ister, aksi halde süresi dolar ve hata yapmana sebep olur.</p>
+				<p>Tetikte ol: ağlak modüller her an yeniden aktif hale gelebilir.</p>
+			</div>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Gaz Salınımı</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/NeedyVentComponent.svg">
+            <h2>Gaz Salınımı Hakkında</h2>
+            <p class="flavour-text">Hacklemek kolay iş değil! Aslında kolay ya. Guguk kuşunun önüne koy düğmeyi, sabahtan akşama hacklesin.</p>
+			<ul>
+				<li>Bilgisayar istemlerine "Evet" için "Y", "Hayır" için "N" tuşlarına basarak cevap ver.</li>
+			</ul>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Kapasitör Deşarjı</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/NeedyDischargeComponent.svg">
+            <h2>Kapasitör Deşarjı Hakkında</h2>
+            <p class="flavour-text">Tahminimce bu zımbırtı yalnızca dikkatini dağıtmak için yapılmış, yoksa elektronik böyle mi çalışır?</p>
+            <ul>
+				<li>Kapasitör aşırı yüklenmeden önce kolu aşağı çekerek deşarj et.</li>
+			<ul>
+        </ul></ul></div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page needy-knob">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Kontrol Düğmeleri</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img class="diagram" src="img/NeedyKnobComponent.svg">
+            <h2>Kontrol Düğmeleri Hakkında</h2>
+            <p class="flavour-text">Gereksiz bir şekilde karmaşık ve aşırı derecede gereksiz. Böyle uzmanlığı insanlık için kullansan memleket kurtulur.</p>
+			<ul>
+				<li>Kontrol düğmesi dört farklı konumdan birine döndürülebilir.</li>
+				<li>Bu modülün sayacı sıfırı gösterdiğinde kontrol düğmesi doğru konumda olmalıdır.</li>
+				<li>Doğru konum 12 LED'in yanma düzenine göre belirlenir.</li>
+				<li>Konumlar "UP" (Yukarı) etiketine görece yönlüdür ve bu etiket herhangi bir yöne dönmüş olabilir.</li>
+			</ul>
+            <h3>LED Düzenleri</h3>
+            
+            <h4>Yukarı Konum:</h4>
+            <table style="display: inline-table"><tbody><tr><td> </td><td> </td><td>X</td><td> </td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></tbody></table>
+            <table style="display: inline-table"><tbody><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td>X</td><td> </td><td>X</td><td>X</td></tr></tbody></table>
+            <h4>Aşağı Konum:</h4><table style="display: inline-table"><tbody><tr><td> </td><td>X</td><td>X</td><td> </td><td> </td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td>X</td><td> </td><td>X</td></tr></tbody></table><table style="display: inline-table"><tbody><tr><td>X</td><td> </td><td>X</td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td>X</td><td> </td><td> </td><td> </td><td>X</td></tr></tbody></table><h4>Sol Konum:</h4><table style="display: inline-table"><tbody><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td>X</td><td> </td><td> </td><td>X</td><td>X</td><td>X</td></tr></tbody></table><table style="display: inline-table"><tbody><tr><td> </td><td> </td><td> </td><td> </td><td>X</td><td> </td></tr><tr><td> </td><td> </td><td> </td><td>X</td><td>X</td><td> </td></tr></tbody></table><h4>Sağ Konum:</h4><table style="display: inline-table"><tbody><tr><td>X</td><td> </td><td>X</td><td>X</td><td>X</td><td>X</td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></tbody></table><table style="display: inline-table"><tbody><tr><td>X</td><td> </td><td>X</td><td>X</td><td> </td><td> </td></tr><tr><td>X</td><td>X</td><td>X</td><td> </td><td>X</td><td> </td></tr></tbody></table>            <br>
+            <br>
+            <p class="needy-diagram-label">X = Yanan LED</p>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+<div class="section">
+    <div class="page appendix-indicators">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Ek A</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <h2>Ek A: Gösterge Tanımları</h2>
+            <p>Etiketli gösterge ışıkları bombanın yan taraflarında bulunabilir.</p>
+            <img style="height: 5em; display:block; margin: .6em 0 0;" src="img/IndicatorWidget.svg">
+            <h3>Yaygın Göstergeler</h3>
+			<ul>
+                <li>SND</li>
+                <li>CLR</li>
+                <li>CAR</li>
+                <li>IND</li>
+                <li>FRQ</li>
+                <li>SIG</li>
+                <li>NSA</li>
+                <li>MSA</li>
+                <li>TRN</li>
+                <li>BOB</li>
+                <li>FRK</li>
+			</ul>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page appendix-batteries">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Ek B</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <h2>Ek B: Pil Tanımları</h2>
+            <p>Bombanın yan taraflarında yer alan pil yuvaları içinde yaygın pil tipleri bulunabilir.</p>
+			<table style="margin-top: 1em;">
+				<tbody><tr><th>Pil</th><th>Tip</th></tr>
+				<tr>
+					<td><img style="width: 4.09375em; height: 6.18125em;" src="img/appendix-batteries/Battery-AA.svg"></td>
+					<td>AA</td>
+				</tr> 
+				<tr><td><img style="width: 4.09375em; height: 5.553125em;" src="img/appendix-batteries/Battery-D.svg"></td><td>D</td></tr> 
+			</tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div><div class="section">
+    <div class="page appendix-ports">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Ek C</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+            <h2>Ek C: Port Tanımları</h2>
+            <p>Dijital ve analog portlar bombanın yan taraflarında bulunabilir.</p>
+			<table>
+				<tbody><tr><th>Port</th><th>Name</th></tr>
+				
+				<tr><td><img style="width: 10.15em;" src="img/appendix-ports/DVI.svg"></td><td>DVI-D</td></tr>	
+				<tr><td><img style="width: 16.1em;" src="img/appendix-ports/Parallel.svg"></td><td>Paralel</td></tr>
+				<tr><td><img style="width: 5.55em;" src="img/appendix-ports/PS2.svg"></td><td>PS/2</td></tr>
+				<tr><td><img style="width: 5.2em;" src="img/appendix-ports/RJ45.svg"></td><td>RJ-45</td></tr>
+				<tr><td><img style="width: 8.35em;" src="img/appendix-ports/Serial.svg"></td><td>Seri</td></tr>
+				<tr><td><img style="width: 5em;" src="img/appendix-ports/StereoRCA.svg"></td><td>Stereo RCA</td></tr>
+			</tbody></table>
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>    </div>
+
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('&lt;script src="js/vendor/jquery-1.11.0.min.js"&gt;&lt;\/script&gt;')</script><script src="js/vendor/jquery-1.11.0.min.js"></script><script src="js/vendor/jquery-1.11.0.min.js"></script>
+	    <script src="js/main.js"></script>
+
+</div></div>
+</body>
+</html>
